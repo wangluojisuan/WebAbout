@@ -7,7 +7,8 @@
 
 <body>
     <div id="app">
-        <p>{{ title }}</p>
+        <input type="text" v-on:input="changeTitle" />
+        <p>{{title}}</p>
     </div>
     <script src="vue.js"></script>
     <script src="main.js"></script>
