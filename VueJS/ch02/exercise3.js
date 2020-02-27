@@ -8,16 +8,17 @@ new Vue({
     },
     computed: {
         result: function () {
-            if (this.value > 37) {
-                return 'done';
-            }
+            console.log('computed');
+            return this.value == 37?'done':'not there yet';
         }
     },
     watch: {
-        value: function (va) {
+        result: function (va) {
+            console.log('watch');
             let vm = this;
             setTimeout(() => {
                 vm.value = 0;
+                console.log('setTimeout');
             }, 5000);
         }
     }
